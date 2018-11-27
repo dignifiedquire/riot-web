@@ -51,7 +51,7 @@ $light-fg-color: #747474;
 // used for focusing form controls
 $focus-bg-color: #dddddd;
 
-// button UI (white-on-green in light skin)
+// button UI
 $accent-fg-color: #ffffff;
 $accent-color: #0576b9;
 $accent-color-50pct: #6CC1F67F;
@@ -75,17 +75,6 @@ $preview-bar-bg-color: #f7f7f7;
 // left-panel style muted accent color
 $secondary-accent-color: #303E4D;
 $tertiary-accent-color: #FFFFFF;
-
-// stop the tinter trying to change the secondary accent color
-// by overriding the key to something untintable
-// XXX: this is a bit of a hack.
-#mx_theme_secondaryAccentColor {
-    color: #c0ffee ! important;
-}
-
-#mx_theme_tertiaryAccentColor {
-    color: #c0ffee ! important;
-}
 
 // used by RoomDirectory permissions
 $plinth-bg-color: $secondary-accent-color;
@@ -315,4 +304,24 @@ $progressbar-color: #000;
 
 .mx_MatrixChat_useCompactLayout .mx_EventTile_avatar {
   top: 6px !important;
+}
+
+.mx_BaseAvatar_image {
+  border-radius: 3px !important;
+}
+
+.mxRoomHeader_topic {
+  font-weight: 400;
+}
+
+.mx_TagPanel_groupsButton {
+  padding: 7px 0;
+}
+
+.mx_BottomLeftMenu {
+  padding: 12px 0;
+}
+
+.mx_RightPanel_footer {
+  padding: 2px 0px 22px;
 }
