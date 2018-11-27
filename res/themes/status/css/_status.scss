@@ -1,33 +1,19 @@
-@font-face {
-    font-family:PostGrotesk-Medium;
-    src:url('https://status.im/fonts/PostGrotesk-Medium.eot');
-    src:url('https://status.im/fonts/PostGrotesk-Medium.eot?#iefix') format("embedded-opentype"),url('https://status.im/fonts/PostGrotesk-Medium.woff') format("woff"),url('https://status.im/fonts/PostGrotesk-Medium.svg#PostGrotesk-Medium') format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family:PostGrotesk-Book;
-    src:url('https://status.im/fonts/PostGrotesk-Book.eot');
-    src:url('https://status.im/fonts/PostGrotesk-Book.eot?#iefix') format("embedded-opentype"),url('https://status.im/fonts/PostGrotesk-Book.woff') format("woff"),url('https://status.im/fonts/PostGrotesk-Book.svg#PostGrotesk-Book') format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900');
 
 // We deliberately prioritise Arial over Helvetica here due to diacritic problems (see _base.scss)
 // N.B. that the status.im website uses:
 // font-family:PostGrotesk-Book,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 // ...but can't be bothered to work out how the apple fonts & segoe interact, so keepingn it simple for now.
 
-$font-family: PostGrotesk-Book, Arial, Helvetica, Sans-Serif;
+$font-family: 'Noto Sans JP', Arial, Helvetica, Sans-Serif;
 
 // typical text (dark-on-white in light skin)
-$primary-fg-color: #70808D;
-$primary-bg-color: #EEF2F5;
+$primary-fg-color: #2c2d30;
+$primary-bg-color: #FFFFFF;
 
 // ***** Start of Status theme specifics ******
 $header-color: #49555F;
-$header-font-family: PostGrotesk-Medium, Arial, Helvetica, Sans-Serif;
+$header-font-family: 'Noto Sans JP', Arial, Helvetica, Sans-Serif;
 
 $footer-color: #8D99A4;
 
@@ -47,7 +33,7 @@ h1,h2,h3,h4,h5 {
     font-weight: 400 ! important;
 }
 
-$callout-color: #4360DF; // or #4957b8 from status.im homepage
+$callout-color: #6698C8;
 
 $form-bg-color: $callout-color;
 $form-fg-color: #ffffff;
@@ -67,8 +53,8 @@ $focus-bg-color: #dddddd;
 
 // button UI (white-on-green in light skin)
 $accent-fg-color: #ffffff;
-$accent-color: #6CC1F6;
-$accent-hover-color: #84cfff;
+$accent-color: #0576b9;
+$accent-hover-color: #e0f0fa;
 
 $selection-fg-color: $primary-bg-color;
 
@@ -78,16 +64,16 @@ $focus-brightness: 125%;
 $warning-color: #F69E98;
 $warning-bg-color: #DF2A8B;
 $info-bg-color: #2A9EDF;
-$mention-user-pill-bg-color: #ff0064;
-$other-user-pill-bg-color: rgba(0, 0, 0, 0.1);
+$mention-user-pill-bg-color: #FFFFFF;
+$other-user-pill-bg-color: #FFFFFF;
 
 $group-alert-color: #774f7e;
 
 $preview-bar-bg-color: #f7f7f7;
 
 // left-panel style muted accent color
-$secondary-accent-color: #586C7B;
-$tertiary-accent-color: #DBEBF6;
+$secondary-accent-color: #303E4D;
+$tertiary-accent-color: #FFFFFF;
 
 // stop the tinter trying to change the secondary accent color
 // by overriding the key to something untintable
@@ -158,9 +144,9 @@ $rte-room-pill-color: #aaa;
 
 // ********************
 
-$roomtile-name-color: #ffffff;
-$roomtile-selected-bg-color: #465561;
-$roomtile-focused-bg-color: #6d8597;
+$roomtile-name-color: rgb(193,197,202);
+$roomtile-selected-bg-color: #6698C8;
+$roomtile-focused-bg-color: #6698C8;
 
 $roomsublist-background: rgba(0, 0, 0, 0.2);
 $roomsublist-label-fg-color: #ffffff;
@@ -259,7 +245,6 @@ $progressbar-color: #000;
 
 .mx_RoomList_emptySubListTip,
 .mx_RoomDropTarget {
-    font-size: 14px ! important;
     border: 1.5px dashed rgba(0,0,0,0.2) ! important;
     color: #fff ! important;
     background-color: transparent ! important;
@@ -289,4 +274,44 @@ $progressbar-color: #000;
 
 .mx_MemberInfo .mx_RoomTile_name {
     color: $primary-fg-color ! important;
+}
+
+.mx_EventTile {
+  padding: 10px 0 !important;
+}
+
+.mx_RoomTile_selected .mx_RoomTile_name {
+  color: #FFFFFF !important;
+}
+
+.mx_RoomTile_name {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+
+.mx_MessageComposer_wrapper {
+  border-top: none !important;
+}
+
+.mx_MessageComposer {
+  border: 2px solid rgba(44,45,48,.5);
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.mx_SenderProfile_name {
+  opacity: 1 !important;
+  font-weight: 900 !important;
+  color: #2c2d30 !important;
+  font-size: 15px !important;
+}
+
+.mx_UserPill {
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+.mx_MatrixChat_useCompactLayout .mx_EventTile_avatar {
+  top: 6px !important;
 }
